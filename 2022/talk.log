@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2022.9.23)  3 OCT 2022 11:10
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2022.9.23)  3 OCT 2022 11:12
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -788,9 +788,9 @@ LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
 (/usr/share/texlive/texmf-dist/tex/latex/beamer/beamercolorthemeorchid.sty)
 (/usr/share/texlive/texmf-dist/tex/latex/beamer/beamerinnerthemerectangles.sty)
 )
-Package hyperref Info: Option `colorlinks' set `true' on input line 23.
+Package hyperref Info: Option `colorlinks' set `true' on input line 24.
 LaTeX Font Info:    Trying to load font information for OT1+lmss on input line 
-25.
+26.
  (/usr/share/texlive/texmf-dist/tex/latex/lm/ot1lmss.fd
 File: ot1lmss.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
@@ -802,24 +802,24 @@ File: l3backend-pdftex.def 2021-05-07 L3 backend support: PDF output (pdfTeX)
 (./talk.aux)
 \openout1 = `talk.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 25.
-LaTeX Font Info:    ... okay on input line 25.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 25.
-LaTeX Font Info:    ... okay on input line 25.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 25.
-LaTeX Font Info:    ... okay on input line 25.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 25.
-LaTeX Font Info:    ... okay on input line 25.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 25.
-LaTeX Font Info:    ... okay on input line 25.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 25.
-LaTeX Font Info:    ... okay on input line 25.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 25.
-LaTeX Font Info:    ... okay on input line 25.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 25.
-LaTeX Font Info:    ... okay on input line 25.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 25.
-LaTeX Font Info:    ... okay on input line 25.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 26.
+LaTeX Font Info:    ... okay on input line 26.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 26.
+LaTeX Font Info:    ... okay on input line 26.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 26.
+LaTeX Font Info:    ... okay on input line 26.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 26.
+LaTeX Font Info:    ... okay on input line 26.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 26.
+LaTeX Font Info:    ... okay on input line 26.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 26.
+LaTeX Font Info:    ... okay on input line 26.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 26.
+LaTeX Font Info:    ... okay on input line 26.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 26.
+LaTeX Font Info:    ... okay on input line 26.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 26.
+LaTeX Font Info:    ... okay on input line 26.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
@@ -877,7 +877,7 @@ Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
 e
 ))
-Package hyperref Info: Link coloring ON on input line 25.
+Package hyperref Info: Link coloring ON on input line 26.
 
 (/usr/share/texlive/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2021-04-02 v2.47 Cross-referencing by name of section
@@ -890,60 +890,60 @@ Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 )
 \c@section@level=\count328
 )
-LaTeX Info: Redefining \ref on input line 25.
-LaTeX Info: Redefining \pageref on input line 25.
-LaTeX Info: Redefining \nameref on input line 25.
+LaTeX Info: Redefining \ref on input line 26.
+LaTeX Info: Redefining \pageref on input line 26.
+LaTeX Info: Redefining \nameref on input line 26.
 
 (./talk.out) (./talk.out)
 \@outlinefile=\write5
 \openout5 = `talk.out'.
 
 LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
-(Font)                  OT1/lmr/m/n --> OT1/cmss/m/n on input line 25.
+(Font)                  OT1/lmr/m/n --> OT1/cmss/m/n on input line 26.
 LaTeX Font Info:    Overwriting symbol font `operators' in version `bold'
-(Font)                  OT1/lmr/bx/n --> OT1/cmss/b/n on input line 25.
+(Font)                  OT1/lmr/bx/n --> OT1/cmss/b/n on input line 26.
 LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
-(Font)                  OT1/cmss/m/n --> OT1/lmss/m/n on input line 25.
+(Font)                  OT1/cmss/m/n --> OT1/lmss/m/n on input line 26.
 LaTeX Font Info:    Overwriting symbol font `operators' in version `bold'
-(Font)                  OT1/cmss/b/n --> OT1/lmss/b/n on input line 25.
+(Font)                  OT1/cmss/b/n --> OT1/lmss/b/n on input line 26.
 \symnumbers=\mathgroup6
 \sympureletters=\mathgroup7
 LaTeX Font Info:    Overwriting math alphabet `\mathrm' in version `normal'
-(Font)                  OT1/lmss/m/n --> OT1/lmr/m/n on input line 25.
-LaTeX Font Info:    Redeclaring math alphabet \mathbf on input line 25.
+(Font)                  OT1/lmss/m/n --> OT1/lmr/m/n on input line 26.
+LaTeX Font Info:    Redeclaring math alphabet \mathbf on input line 26.
 LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `normal'
-(Font)                  OT1/lmr/bx/n --> OT1/lmss/b/n on input line 25.
+(Font)                  OT1/lmr/bx/n --> OT1/lmss/b/n on input line 26.
 LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `bold'
-(Font)                  OT1/lmr/bx/n --> OT1/lmss/b/n on input line 25.
-LaTeX Font Info:    Redeclaring math alphabet \mathsf on input line 25.
+(Font)                  OT1/lmr/bx/n --> OT1/lmss/b/n on input line 26.
+LaTeX Font Info:    Redeclaring math alphabet \mathsf on input line 26.
 LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `normal'
-(Font)                  OT1/lmss/m/n --> OT1/lmss/m/n on input line 25.
+(Font)                  OT1/lmss/m/n --> OT1/lmss/m/n on input line 26.
 LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `bold'
-(Font)                  OT1/lmss/bx/n --> OT1/lmss/m/n on input line 25.
-LaTeX Font Info:    Redeclaring math alphabet \mathit on input line 25.
+(Font)                  OT1/lmss/bx/n --> OT1/lmss/m/n on input line 26.
+LaTeX Font Info:    Redeclaring math alphabet \mathit on input line 26.
 LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `normal'
-(Font)                  OT1/lmr/m/it --> OT1/lmss/m/it on input line 25.
+(Font)                  OT1/lmr/m/it --> OT1/lmss/m/it on input line 26.
 LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `bold'
-(Font)                  OT1/lmr/bx/it --> OT1/lmss/m/it on input line 25.
-LaTeX Font Info:    Redeclaring math alphabet \mathtt on input line 25.
+(Font)                  OT1/lmr/bx/it --> OT1/lmss/m/it on input line 26.
+LaTeX Font Info:    Redeclaring math alphabet \mathtt on input line 26.
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `normal'
-(Font)                  OT1/lmtt/m/n --> OT1/lmtt/m/n on input line 25.
+(Font)                  OT1/lmtt/m/n --> OT1/lmtt/m/n on input line 26.
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
-(Font)                  OT1/lmtt/m/n --> OT1/lmtt/m/n on input line 25.
+(Font)                  OT1/lmtt/m/n --> OT1/lmtt/m/n on input line 26.
 LaTeX Font Info:    Overwriting symbol font `numbers' in version `bold'
-(Font)                  OT1/lmss/m/n --> OT1/lmss/b/n on input line 25.
+(Font)                  OT1/lmss/m/n --> OT1/lmss/b/n on input line 26.
 LaTeX Font Info:    Overwriting symbol font `pureletters' in version `bold'
-(Font)                  OT1/lmss/m/it --> OT1/lmss/b/it on input line 25.
+(Font)                  OT1/lmss/m/it --> OT1/lmss/b/it on input line 26.
 LaTeX Font Info:    Overwriting math alphabet `\mathrm' in version `bold'
-(Font)                  OT1/lmss/b/n --> OT1/lmr/b/n on input line 25.
+(Font)                  OT1/lmss/b/n --> OT1/lmr/b/n on input line 26.
 LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `bold'
-(Font)                  OT1/lmss/b/n --> OT1/lmss/b/n on input line 25.
+(Font)                  OT1/lmss/b/n --> OT1/lmss/b/n on input line 26.
 LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `bold'
-(Font)                  OT1/lmss/m/n --> OT1/lmss/b/n on input line 25.
+(Font)                  OT1/lmss/m/n --> OT1/lmss/b/n on input line 26.
 LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `bold'
-(Font)                  OT1/lmss/m/it --> OT1/lmss/b/it on input line 25.
+(Font)                  OT1/lmss/m/it --> OT1/lmss/b/it on input line 26.
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
-(Font)                  OT1/lmtt/m/n --> OT1/lmtt/b/n on input line 25.
+(Font)                  OT1/lmtt/m/n --> OT1/lmtt/b/n on input line 26.
 
 (/usr/share/texlive/texmf-dist/tex/latex/translator/translator-basic-dictionary
 -English.dict
@@ -986,10 +986,10 @@ ap}
 ] [8
 
 ]
-<./images/docker-ps.png, id=302, 449.68pt x 177.66376pt>
+<./images/docker-ps.png, id=308, 449.68pt x 177.66376pt>
 File: ./images/docker-ps.png Graphic file (type png)
 <use ./images/docker-ps.png>
-Package pdftex.def Info: ./images/docker-ps.png  used on input line 101.
+Package pdftex.def Info: ./images/docker-ps.png  used on input line 102.
 (pdftex.def)             Requested size: 230.46739pt x 91.05461pt.
 
 [9
@@ -997,34 +997,34 @@ Package pdftex.def Info: ./images/docker-ps.png  used on input line 101.
  <./images/docker-ps.png>] [10
 
 ]
-<./images/core-integrations.png, id=368, 1086.0575pt x 627.34375pt>
+<./images/core-integrations.png, id=374, 1086.0575pt x 627.34375pt>
 File: ./images/core-integrations.png Graphic file (type png)
 <use ./images/core-integrations.png>
-Package pdftex.def Info: ./images/core-integrations.png  used on input line 126
+Package pdftex.def Info: ./images/core-integrations.png  used on input line 127
 .
 (pdftex.def)             Requested size: 230.46739pt x 133.12451pt.
  [11
 
  <./images/core-integrations.png>]
-<./images/hacs-integrations.png, id=401, 1637.11626pt x 641.39626pt>
+<./images/hacs-integrations.png, id=407, 1637.11626pt x 641.39626pt>
 File: ./images/hacs-integrations.png Graphic file (type png)
 <use ./images/hacs-integrations.png>
-Package pdftex.def Info: ./images/hacs-integrations.png  used on input line 142
+Package pdftex.def Info: ./images/hacs-integrations.png  used on input line 143
 .
 (pdftex.def)             Requested size: 122.91406pt x 48.15157pt.
-<./images/hacs-frontend.png, id=402, 1632.0975pt x 631.35875pt>
+<./images/hacs-frontend.png, id=408, 1632.0975pt x 631.35875pt>
 File: ./images/hacs-frontend.png Graphic file (type png)
 <use ./images/hacs-frontend.png>
-Package pdftex.def Info: ./images/hacs-frontend.png  used on input line 142.
+Package pdftex.def Info: ./images/hacs-frontend.png  used on input line 143.
 (pdftex.def)             Requested size: 122.91406pt x 47.54253pt.
 
 [12
 
  <./images/hacs-integrations.png> <./images/hacs-frontend.png>]
-<./images/add-on.png, id=435, 1718.42pt x 825.0825pt>
+<./images/add-on.png, id=441, 1718.42pt x 825.0825pt>
 File: ./images/add-on.png Graphic file (type png)
 <use ./images/add-on.png>
-Package pdftex.def Info: ./images/add-on.png  used on input line 154.
+Package pdftex.def Info: ./images/add-on.png  used on input line 155.
 (pdftex.def)             Requested size: 230.46739pt x 110.65112pt.
  [13
 
@@ -1047,20 +1047,14 @@ Package pdftex.def Info: ./images/add-on.png  used on input line 154.
 \openout8 = `talk.snm'.
 
  (./talk.aux)
-
-Package rerunfilecheck Warning: File `talk.out' has changed.
-(rerunfilecheck)                Rerun to get outlines right
-(rerunfilecheck)                or use package `bookmark'.
-
-Package rerunfilecheck Info: Checksums for `talk.out':
-(rerunfilecheck)             Before: 1823AC0BD9BB17968F9F756275426163;975
-(rerunfilecheck)             After:  E534F0563907EB32EA167289079136D7;1064.
+Package rerunfilecheck Info: File `talk.out' has not changed.
+(rerunfilecheck)             Checksum: E534F0563907EB32EA167289079136D7;1064.
  ) 
 Here is how much of TeX's memory you used:
- 20810 strings out of 478855
- 386937 string characters out of 5858635
- 671962 words of memory out of 6000000
- 37949 multiletter control sequences out of 15000+600000
+ 20824 strings out of 478855
+ 387166 string characters out of 5858635
+ 672527 words of memory out of 6000000
+ 37963 multiletter control sequences out of 15000+600000
  420367 words of font info for 35 fonts, out of 8000000 for 9000
  1137 hyphenation exceptions out of 8191
  128i,14n,126p,428b,552s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -1068,10 +1062,10 @@ Here is how much of TeX's memory you used:
 ve/texmf-dist/fonts/type1/public/lm/lmss10.pfb></usr/share/texlive/texmf-dist/f
 onts/type1/public/lm/lmss12.pfb></usr/share/texlive/texmf-dist/fonts/type1/publ
 ic/lm/lmss8.pfb>
-Output written on talk.pdf (17 pages, 608153 bytes).
+Output written on talk.pdf (17 pages, 608903 bytes).
 PDF statistics:
- 614 PDF objects out of 1000 (max. 8388607)
- 548 compressed objects within 6 object streams
+ 619 PDF objects out of 1000 (max. 8388607)
+ 553 compressed objects within 6 object streams
  50 named destinations out of 1000 (max. 500000)
- 148 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 156 words of extra memory for PDF output out of 10000 (max. 10000000)
 
