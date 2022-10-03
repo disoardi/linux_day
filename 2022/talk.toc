@@ -1,0 +1,10 @@
+\beamer@sectionintoc {1}{Ci sono io?}{3}{0}{1}
+\beamer@sectionintoc {3}{Home Assistant}{6}{0}{2}
+\beamer@sectionintoc {4}{Home Assistant}{7}{0}{3}
+\beamer@subsectionintoc {4}{1}{Deploy}{7}{0}{3}
+\beamer@sectionintoc {5}{Integrazioni}{10}{0}{4}
+\beamer@subsectionintoc {5}{1}{Native}{11}{0}{4}
+\beamer@subsectionintoc {5}{2}{HACS}{12}{0}{4}
+\beamer@subsectionintoc {5}{3}{Add-on}{13}{0}{4}
+\beamer@sectionintoc {6}{Casa Mia}{14}{0}{5}
+\beamer@sectionintoc {7}{Appendice}{17}{0}{6}
