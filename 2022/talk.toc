@@ -1,4 +1,4 @@
-\beamer@sectionintoc {1}{Ci sono io?}{3}{0}{1}
+\beamer@sectionintoc {1}{Chi sono io?}{3}{0}{1}
 \beamer@sectionintoc {3}{Home Assistant}{6}{0}{2}
 \beamer@sectionintoc {4}{Home Assistant}{7}{0}{3}
 \beamer@subsectionintoc {4}{1}{Deploy}{7}{0}{3}

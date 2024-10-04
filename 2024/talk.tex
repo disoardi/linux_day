@@ -1,208 +1,186 @@
-\documentclass[hyperref={pdfpagelabels=false}]{beamer}
-\usepackage{lmodern}
-\usetheme{Antibes}
-\title{Come domotizzo casa nonostante mia Moglie}
-\subtitle{La domotica col copy and paste}  
-\author{Davide Isoardi}
-\date{Linx Day Torino - 2022/10/22} 
+\documentclass{beamer}
 
-\newif\ifshowtoc
-\showtoctrue% toggles to show the toc
-% set captions with numbers
-\setbeamertemplate{caption}[numbered]
-\AtBeginSection{%
-	\ifshowtoc
-	\begin{frame}
-		\tableofcontents[currentsection, subsectionstyle=show/show/hide]
-	\end{frame}
-	\fi
+% --- Pacchetti per i font personalizzati ---
+\usepackage{fontspec} % Richiede XeLaTeX o LuaLaTeX
+\setsansfont{Raleway} % Font principale
+\setmainfont{Raleway}
+\newfontfamily\titlefont{Rokkitt} % Font per i titoli
+
+% --- Definizione del tema ---
+\usetheme{default} % Tema di base
+\usecolortheme{seagull} % Colori semplici
+
+% --- Configurazione dei colori personalizzati ---
+\definecolor{linuxGreen}{RGB}{57,181,74} % Verde open source
+\definecolor{linuxGray}{RGB}{85,87,83} % Grigio scuro
+
+% --- Logo Tux in alto a sinistra ---
+\setbeamertemplate{logo}{%
+	\includegraphics[height=0.8cm]{images/Tux.png} % Immagine di Tux; sostituire con il percorso effettivo
 }
 
-\hypersetup{
-	colorlinks,
-	urlcolor=blue
+% --- Struttura e colore delle slide ---
+\setbeamercolor{frametitle}{bg=linuxGreen, fg=white}
+\setbeamercolor{title}{fg=linuxGreen}
+\setbeamercolor{structure}{fg=linuxGray}
+\setbeamercolor{section in head/foot}{bg=linuxGreen, fg=white}
+\setbeamercolor{author in head/foot}{bg=linuxGray, fg=white}
+
+% --- Personalizzazione dei titoli con font Rokkitt ---
+\setbeamerfont{title}{family=\titlefont, size=\Huge}
+\setbeamerfont{frametitle}{family=\titlefont, size=\LARGE}
+\setbeamerfont{section title}{family=\titlefont}
+
+% --- Personalizzazione del titolo della slide ---
+\setbeamertemplate{frametitle}{%
+	\begin{beamercolorbox}[wd=\paperwidth,ht=2.5ex,dp=1ex,leftskip=0.3cm]{frametitle}
+		\usebeamerfont{frametitle}\insertframetitle
+	\end{beamercolorbox}
 }
 
+% --- Footer con data e titolo sezione ---
+\setbeamertemplate{footline}{%
+	\begin{beamercolorbox}[wd=\paperwidth,ht=2.5ex,dp=1ex,leftskip=0.3cm,rightskip=0.3cm]{section in head/foot}
+		Linux Day 26 Ottobre 2024 \hfill \insertshorttitle \hfill \insertframenumber/\inserttotalframenumber
+	\end{beamercolorbox}
+}
+
+% --- Struttura della presentazione ---
+\title{Introduzione al Mondo Open Source}
+\author{Relatore: Davide Isoardi}
+\date{Linux Day 26 Ottobre 2024}
+\newcommand{\license}{Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0)}
+
+% --- Inizio del documento ---
 \begin{document}
+	
+	% Slide di apertura
 	\begin{frame}
 		\titlepage
-	\end{frame} 
-	
-	
-	\begin{frame}
-		\frametitle{ToC}
-		\tableofcontents[hidesubsections]
-	\end{frame} 
-	
-	
-	\section{Chi sono io?} 
-	\begin{frame}
-		\frametitle{Chi sono io?} 
-		Sono un nerd (all'antica) che lavora come informatico in una società di consulenza ad alta specializzazione che non ha a che vedere con la domotica.
-		
-		Quindi la domotica si può capire anche se non è il tuo mestiere
 	\end{frame}
-	\showtocfalse% toggles to not show the toc
-	\section*{Remerciements}
-	\begin{frame}
-		\begin{block}{Non sono fidelizzato ne sponsorizzato, ma posso fornirvi le mie esperienze e quindi vi dirò nomi e cognomi degli spunti e degli accessori che ho usato - nel bene e nel male}
-		\end{block}
+	
+	% Slide dell'indice dei contenuti
+	\begin{frame}{Indice dei Contenuti}
+		\tableofcontents
 	\end{frame}
-	\section{Home Assistant}
-	\begin{frame}
-		\frametitle{Home Assistant}
+	
+	% --- Sezione Premesse ---
+	\section{Premesse}
+	
+	\begin{frame}{Stack ISO/OSI}
 		\begin{itemize}
-			\item E' un hub per la domotica
-			\item E' ovviamente open-source
-			\item E' locale: non usa il cloud (se vuoi lo usi certo)
-			\item Lo sviluppo è basato sulla community oltre al team di sviluppo ufficiale
-			\item E' modulare
-		\end{itemize}
-		\medskip
-		\normalsize Qui la home del progetto: \href{https://www.home-assistant.io/}{link}\\	\normalsize Qui i repo: \href{https://github.com/home-assistant}{link}
-	\end{frame}
-	
-	
-	\section{Home Assistant} 
-	\subsection{Deploy}
-	\begin{frame}
-		\frametitle{Hardware}
-		\begin{itemize}
-			\item NUC/Mini PC 
-			\item Raspberry PI (3 o 4 - meglio)
-			\item Vecchio PC
-			\item Proxmox
+			\item Modello di riferimento per la comunicazione in rete.
+			\item Suddiviso in 7 livelli, ognuno con funzioni specifiche.
+			\item Garantisce interoperabilità tra sistemi di produttori diversi.
 		\end{itemize}
 	\end{frame}
-
-	\begin{frame}
-		\frametitle{Modalità di deploy}
+	
+	\begin{frame}{Overview su Home Assistant}
 		\begin{itemize}
-			\item Home Assistant OS  
-			\item Home Assistant Supervised su Docker 
-			\item Home Assistant Core 
-			\item Home Assistant Core su Docker
+			\item Piattaforma open-source per l'automazione domestica.
+			\item Supporta numerosi protocolli e dispositivi IoT.
+			\item Sviluppata per integrare vari sistemi in una piattaforma unica.
 		\end{itemize}
-	\medskip
-		\normalsize Per iniziare vi consiglio di documentarvi su indomus.it e in particolare da questa pagina: \href{https://indomus.it/formazione/home-assistant-su-raspberry-pi-varie-installazioni-le-cose-da-fare/}{link}
 	\end{frame}
 	
-	\begin{frame}
-		\frametitle{Il mio deploy}
+	% --- Sezione IoT e Onde Radio ---
+	\section{IoT e Onde Radio}
+	
+	\begin{frame}{Z-wave}
 		\begin{itemize}
-			\item Rpi4 (4GB RAM)  
-			\item Docker ma con supervisor
+			\item Progettato specificamente per la domotica.
+			\item Basso consumo energetico e frequenza sub-GHz.
+			\item Supporta reti mesh per aumentare il raggio di copertura.
 		\end{itemize}
-		\begin{figure}
-			\centering
-			\includegraphics[width=0.75\textwidth]{./images/docker-ps.png}
-			\caption{docker ps}
-			\label{fig:docker-ps}
-		\end{figure}
 	\end{frame}
 	
-	\section{Integrazioni}
-	\begin{frame}
-		\frametitle{Integrazioni}
+	\begin{frame}{ZigBee}
 		\begin{itemize}
-			\item Native  
-			\item HACS - \href{https://hacs.xyz}{link}
-			\item Add-on
+			\item Protocollo wireless a bassa potenza, ideale per dispositivi a batteria.
+			\item Ampiamente usato in domotica e automazione.
+			\item Frequenza 2.4 GHz, con supporto per reti mesh.
 		\end{itemize}
-		\begin{block}{Alcune integrazioni, tipo quella ufficiale con Alexa, sono abilitabili tramite il servizio cloud di Nabu casa (\href{https://www.nabucasa.com/}{link}) che permette di esporre il tuo home assistant anche al di fuori della rete domestica}
-		\end{block}
 	\end{frame}
-
-	\subsection{Native}
-	\begin{frame}
-	\frametitle{Native}
-		\href{https://www.home-assistant.io/integrations}{Qui}
-		una lista completa di quelle presenti. Considerate che se ne aggiungono ad ogni release.
-		\begin{figure}
-			\centering
-			\includegraphics[width=0.75\textwidth]{./images/core-integrations.png}
-			\caption{Integrazioni native}
-			\label{fig:core-integration}
-		\end{figure}
-	\end{frame}
-
-	\subsection{HACS}
-	\begin{frame}
-	\frametitle{HACS}
-	\normalsize E' il Home Assistant Community Store - si divide in:
-	\begin{itemize}
-		\item integrazioni - altre integrazioni ma gestite dalla community
-		\item frontend - componenti aggiuntive per le dashboard
-	\end{itemize}
-	\begin{figure}
-		\centering
-		\includegraphics[width=0.4\textwidth]{./images/hacs-integrations.png}\quad\includegraphics[width=0.4\textwidth]{./images/hacs-frontend.png}
-		\caption{HACS}
-		\label{fig:hacs-integration}
-	\end{figure}
-	\end{frame}
-
-	\subsection{Add-on}
-	\begin{frame}
-	\frametitle{Add-on}
-	\normalsize Direi che è autoesplicativo. Aggiungo solo che è possibile aggiunre nuovi add-on semplicemente trovandoli su internet e inserendo il repo git.
-	\begin{figure}
-		\centering
-		\includegraphics[width=0.75\textwidth]{./images/add-on.png}
-		\caption{Add-on}
-		\label{fig:add-on}
-	\end{figure}
-	\end{frame}
-
-	\section{Casa Mia}
-	\begin{frame}
-	\frametitle{Cosa uso}
-	\begin{itemize}
-		\item RaspberryPI 4 con 4 core e 4GB di RAM (no external device)
-		\item Installazione Docker con supervisor
-		\item IoT prevalentemente shelly -  \href{https://shelly.cloud/}{Official site}
-		\item Google Drive per il backup
-		\item Nabu casa per accesso esterno e per Alexa
-		\item Home assistant companion
-	\end{itemize}
-	\end{frame}
-
-	\begin{frame}
-	\frametitle{Cosa faccio}
-	\begin{itemize}
-		\item Automazione Lavatrice - Asciugatrice
-		\item Automazioni in merito alla presenza in casa - fuori casa
-		\item Controllo consumi
-		\item Gestione termica
+	
+	\begin{frame}{BLE (Bluetooth Low Energy)}
 		\begin{itemize}
-			\item Riscaldamento sopra/sotto
-			\item Pompe di calore
-			\item Tende esterne
-			\item Controllo calendario
+			\item Versione ottimizzata di Bluetooth per basso consumo.
+			\item Utilizzato in dispositivi come sensori e wearable.
+			\item Raggio corto, ma facilmente integrabile grazie alla sua diffusione.
 		\end{itemize}
-		\item Irrigazione
-	\end{itemize}
 	\end{frame}
-
-	\begin{frame}
-	\frametitle{La ToDo list}
-	\begin{itemize}
-		\item Riscaldamento per stanza (sopra)
-		\item Controllo consumi stanze mancanti
-		\item Irrigazione con controllo meteo e stato prato
-		\item Ciclo di risveglio
-	\end{itemize}
+	
+	\begin{frame}{CoAP (Constrained Application Protocol)}
+		\begin{itemize}
+			\item Protocollo di comunicazione per IoT su reti a bassa larghezza di banda.
+			\item Supporta trasmissione dati RESTful simile a HTTP.
+			\item Ideale per dispositivi con risorse limitate.
+		\end{itemize}
 	\end{frame}
-
-	\section{Appendice}
-	\begin{frame}
-	\frametitle{Ringraziamenti}
-	\begin{itemize}
-		\item Gruppo facebook  Home Assistant Italia - \href{https://www.facebook.com/groups/147299622598134}{Link}
-		\item inDomus - \href{https://indomus.it/}{Link}
-		\item hassioHelp - \href{https://hassiohelp.eu/}{Link}
-		\item Max Albani - \href{https://www.maxalbani.it/}{Link}
-		\item Salvatore Lentini e DomHouse - \href{https://domhouse.it/}{Link}
-	\end{itemize}
-\end{frame}
+	
+	\begin{frame}{WiFi}
+		\begin{itemize}
+			\item Protocollo di rete wireless diffuso e ad alta velocità.
+			\item Ampia larghezza di banda e bassa latenza.
+			\item Ideale per dispositivi che necessitano di velocità, ma a scapito del consumo energetico.
+		\end{itemize}
+	\end{frame}
+	
+	\begin{frame}{Matter}
+		\begin{itemize}
+			\item Protocollo unificato per l'interoperabilità dei dispositivi IoT.
+			\item Supporta vari protocolli come WiFi, Ethernet e Thread.
+			\item Sviluppato dal gruppo CSA (Connectivity Standards Alliance).
+		\end{itemize}
+	\end{frame}
+	
+	\begin{frame}{Thread}
+		\begin{itemize}
+			\item Protocollo di rete wireless basato su IPv6.
+			\item Progettato per la comunicazione sicura tra dispositivi IoT.
+			\item Supporta reti mesh, migliorando l'affidabilità e riducendo i consumi.
+		\end{itemize}
+	\end{frame}
+	
+	% --- Sezione Deadmatch ---
+	\section{Deadmatch}
+	
+	\begin{frame}{Confronto tra i protocolli visti}
+		\begin{itemize}
+			\item Z-Wave e ZigBee: ideali per reti mesh a basso consumo.
+			\item WiFi: maggiore velocità, ma più consumo energetico.
+			\item BLE: ottimo per corto raggio e basso consumo.
+			\item Matter e Thread: offrono interoperabilità e connessione sicura tra dispositivi.
+		\end{itemize}
+	\end{frame}
+	
+	\begin{frame}{Quando usare e quando evitare i protocolli}
+		\begin{itemize}
+			\item Z-Wave e ZigBee: perfetti per sensori e automazione domestica.
+			\item WiFi: adatto per dispositivi fissi con alimentazione continua.
+			\item BLE: ideale per dispositivi portatili con batteria.
+			\item Matter e Thread: ottimi per integrazioni future-proof e sicurezza.
+		\end{itemize}
+	\end{frame}
+	
+	% --- Slide finale con licenza e ringraziamenti ---
+	\section*{Licenza e Ringraziamenti}
+	\begin{frame}{Licenza e Ringraziamenti}
+		\begin{center}
+			\textbf{Licenza:} \license % Testo della licenza centrato
+			
+			\vspace{1em}
+			
+			Questa presentazione è rilasciata sotto la licenza \license. Sentiti libero di condividere e adattare il contenuto rispettando i termini della licenza.
+			
+			\vspace{1.5em}
+			
+			\includegraphics[width=0.2\textwidth]{images/cc-by-sa.png} % Logo Creative Commons, ridotto e centrato
+			
+			\vspace{1.5em}
+			
+			\textbf{Ringraziamenti:} Un ringraziamento speciale all'Italian Linux Society per il supporto alla community open source.
+		\end{center}
+	\end{frame}
+	
 \end{document}
