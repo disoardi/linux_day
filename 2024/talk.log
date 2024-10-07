@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999996 (TeX Live 2024) (preloaded format=xelatex 2024.10.3)  4 OCT 2024 17:00
+This is XeTeX, Version 3.141592653-2.6-0.999996 (TeX Live 2024) (preloaded format=xelatex 2024.10.3)  7 OCT 2024 17:59
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -865,10 +865,6 @@ Package hyperref Info: Link coloring OFF on input line 55.
 \@outlinefile=\write5
 \openout5 = `talk.out'.
 
-
-
-Package hyperref Warning: Rerun to get /PageLabels entry.
-
 LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
 (Font)                  OT1/cmr/m/n --> OT1/cmss/m/n on input line 55.
 LaTeX Font Info:    Overwriting symbol font `operators' in version `bold'
@@ -1084,15 +1080,71 @@ File: images/Tux.png Graphic file (type bmp)
  [13
 
 ]
+File: images/Tux.png Graphic file (type bmp)
+<images/Tux.png>
+ [14
+
+]
+File: images/Tux.png Graphic file (type bmp)
+<images/Tux.png>
+ [15
+
+]
+File: images/Tux.png Graphic file (type bmp)
+<images/Tux.png>
+ [16
+
+]
+File: images/Tux.png Graphic file (type bmp)
+<images/Tux.png>
+ [17
+
+]
+File: images/Tux.png Graphic file (type bmp)
+<images/Tux.png>
+ [18
+
+]
+File: images/Tux.png Graphic file (type bmp)
+<images/Tux.png>
+ [19
+
+]
+File: images/Tux.png Graphic file (type bmp)
+<images/Tux.png>
+ [20
+
+]
+File: images/Tux.png Graphic file (type bmp)
+<images/Tux.png>
+
+[21
+
+]
+File: images/Tux.png Graphic file (type bmp)
+<images/Tux.png>
+ [22
+
+]
+File: images/Tux.png Graphic file (type bmp)
+<images/Tux.png>
+ [23
+
+]
+File: images/Tux.png Graphic file (type bmp)
+<images/Tux.png>
+ [24
+
+]
 
 LaTeX Font Warning: Font shape `TU/Raleway(0)/b/n' undefined
-(Font)              using `TU/Raleway(0)/m/n' instead on input line 184.
+(Font)              using `TU/Raleway(0)/m/n' instead on input line 326.
 
 File: images/cc-by-sa.png Graphic file (type bmp)
 <images/cc-by-sa.png>
 File: images/Tux.png Graphic file (type bmp)
 <images/Tux.png>
-[14
+[25
 
 ]
 \tf@nav=\write6
@@ -1113,22 +1165,16 @@ L3 programming layer <2024-02-20>
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
-
-Package rerunfilecheck Warning: File `talk.out' has changed.
-(rerunfilecheck)                Rerun to get outlines right
-(rerunfilecheck)                or use package `bookmark'.
-
-Package rerunfilecheck Info: Checksums for `talk.out':
-(rerunfilecheck)             Before: D41D8CD98F00B204E9800998ECF8427E;0
-(rerunfilecheck)             After:  A054AB54F0432CD115F26D27352AD6D2;472.
+Package rerunfilecheck Info: File `talk.out' has not changed.
+(rerunfilecheck)             Checksum: 8031E94F436DD9A1B29E365597A747A3;798.
  ) 
 Here is how much of TeX's memory you used:
- 23693 strings out of 474773
- 501268 string characters out of 5757724
- 1926839 words of memory out of 5000000
- 45356 multiletter control sequences out of 15000+600000
- 563285 words of font info for 81 fonts, out of 8000000 for 9000
+ 23773 strings out of 474773
+ 503014 string characters out of 5757724
+ 1930839 words of memory out of 5000000
+ 45428 multiletter control sequences out of 15000+600000
+ 565032 words of font info for 95 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
  128i,14n,123p,417b,570s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on talk.pdf (14 pages).
+Output written on talk.pdf (25 pages).

@@ -1,3 +1,5 @@
 \beamer@sectionintoc {1}{Premesse}{3}{0}{1}
 \beamer@sectionintoc {2}{IoT e Onde Radio}{5}{0}{2}
-\beamer@sectionintoc {3}{Deadmatch}{12}{0}{3}
+\beamer@sectionintoc {3}{Protocolli di interoperabilità}{16}{0}{3}
+\beamer@sectionintoc {4}{Thread e Matter}{22}{0}{4}
+\beamer@sectionintoc {5}{Deadmatch}{23}{0}{5}
