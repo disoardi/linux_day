@@ -1,5 +1,9 @@
 \documentclass{beamer}
 
+%Glider
+\usepackage{tikz}
+\usepackage{graphics}
+
 % --- Pacchetti per i font personalizzati ---
 \usepackage{fontspec} % Richiede XeLaTeX o LuaLaTeX
 \setsansfont{Raleway} % Font principale
@@ -46,7 +50,7 @@
 }
 
 % --- Struttura della presentazione ---
-\title{Introduzione al Mondo Open Source}
+\title{Onde radio e polli fritti}
 \author{Relatore: Davide Isoardi}
 \date{Linux Day 26 Ottobre 2024}
 \newcommand{\license}{Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0)}
@@ -67,22 +71,74 @@
 	% --- Sezione Premesse ---
 	\section{Premesse}
 	
-	\begin{frame}{Stack ISO/OSI}
-		\begin{itemize}
-			\item Modello di riferimento per la comunicazione in rete.
-			\item Suddiviso in 7 livelli, ognuno con funzioni specifiche.
-			\item Garantisce interoperabilità tra sistemi di produttori diversi.
-		\end{itemize}
-	\end{frame}
-	
 	\begin{frame}{Overview su Home Assistant}
 		\begin{itemize}
 			\item Piattaforma open-source per l'automazione domestica.
 			\item Supporta numerosi protocolli e dispositivi IoT.
 			\item Sviluppata per integrare vari sistemi in una piattaforma unica.
+			\item Fa parte della Open Home Foundation, un'organizzazione non profit che supporta lo sviluppo di tecnologie open-source per l'automazione domestica.
+			\item ... anche ESPHome ne fa parte
 		\end{itemize}
 	\end{frame}
 	
+	\begin{frame}{Stack ISO/OSI}
+		\begin{columns}
+		\begin{column}{0.5\textwidth}
+			\begin{itemize}
+				\item Modello di riferimento per la comunicazione in rete.
+				\item Suddiviso in 7 livelli, ognuno con funzioni specifiche.
+				\item Garantisce interoperabilità tra sistemi di produttori diversi.
+			\end{itemize}
+		\end{column}
+		\begin{column}{0.5\textwidth}
+			\includegraphics[width=4cm,angle=45]{images/OSI_Model_Italiano.svg.png}
+		\end{column}
+		\end{columns}
+	\end{frame}
+
+	
+	\begin{frame}{Onde Radio}
+		Le onde radio sono una forma di radiazione elettromagnetica che viaggia alla velocità della luce \( c \approx 3 \times 10^8 \, m/s \). 
+	
+		\vspace{0.3cm}
+		La relazione tra velocità \( v \), frequenza \( f \), e lunghezza d'onda \( \lambda \) è espressa dalla formula:
+	
+	\[
+	v = \lambda f
+	\]
+	
+ 	La velocità in generale è definita come \( v = \frac{\Delta S}{\Delta t} \).
+	
+	Per le onde, \( \Delta S = \lambda \) e \( \Delta t = T \) ed è il periodo:
+	
+	\[
+	v = \frac{\lambda}{T}
+	\]
+	
+	Sapendo che \( f = \frac{1}{T} \), otteniamo:
+	
+	\[
+	v = \lambda \cdot f
+	\]
+	
+
+	
+\end{frame}
+\begin{frame}{Relazione tra velocità e lunghezza d'onda}
+	Per le onde elettromagnetiche, \( v = c \), quindi:
+	
+	\[
+	c = \lambda \cdot f \quad \Rightarrow \quad \lambda = \frac{c}{f}
+	\]
+
+	\vspace{0.3cm}
+	Calcoliamo la lunghezza d'onda per una frequenza di 2,4 GHz:
+	
+	\[
+	\lambda =  \frac{c}{f} = \frac{3 \times 10^8 \, \text{m/s}}{2,4 \times 10^9 \, \text{Hz}} \approx 0,125 \, \text{m} = 12,5 \, \text{cm}
+	\]
+
+\end{frame}
 	% --- Sezione IoT e Onde Radio ---
 	\section{IoT e Onde Radio}
 	
@@ -91,6 +147,7 @@
 			\item Progettato specificamente per la domotica.
 			\item Basso consumo energetico e frequenza sub-GHz.
 			\item Supporta reti mesh per aumentare il raggio di copertura.
+			\item Richiede un hub specifico.
 		\end{itemize}
 	\end{frame}
 	\begin{frame}{Z-Wave (dettagli tecnici)}
@@ -111,6 +168,7 @@
 			\item Protocollo wireless a bassa potenza, ideale per dispositivi a batteria.
 			\item Ampiamente usato in domotica e automazione.
 			\item Frequenza 2.4 GHz, con supporto per reti mesh.
+			\item Richiede un hub specifico.
 		\end{itemize}
 	\end{frame}
 	\begin{frame}{ZigBee (dettagli tecnici)}
@@ -206,13 +264,22 @@
 	\end{frame}
 	
 	\begin{frame}{Matter}
-		\begin{itemize}
-			\item Protocollo unificato per l'interoperabilità dei dispositivi IoT.
-			\item Supporta vari protocolli come WiFi, Ethernet e Thread.
-			\item Sviluppato dal gruppo CSA (Connectivity Standards Alliance).
-		\end{itemize}
+		\begin{columns}
+			\begin{column}{0.4\textwidth}
+				\begin{itemize}
+					\item Protocollo unificato per l'interoperabilità dei dispositivi IoT.
+					\item Supporta vari protocolli come WiFi, Ethernet e Thread.
+					\item Sviluppato dal gruppo CSA (Connectivity Standards Alliance).
+					\item ipv6
+				\end{itemize}
+			\end{column}
+			\begin{column}{0.6\textwidth}
+				\includegraphics[width=6cm]{images/matter_stack.png}
+			\end{column}
+		\end{columns}
 	\end{frame}
-\begin{frame}{Matter - Dettagli Tecnici 1}
+	
+	\begin{frame}{Matter - Dettagli Tecnici 1}
 	\begin{itemize}
 		\item Comunicazione device-to-device:
 		\begin{itemize}
@@ -257,7 +324,7 @@
 \begin{frame}
 	\frametitle{Thread: Dettagli Tecnici}
 	\begin{itemize}
-		\item Funziona principalmente al livello network (livello 3 ISO/OSI) su IPv6.
+		\item Funziona al livello network (livello 3 ISO/OSI) su IPv6.
 		\item Ottimizzato per dispositivi a basso consumo, ideale per sensori e attuatori alimentati a batteria.
 		\item Ha un range di azione: 30-100 metri tra i nodi, con possibilità di estensione grazie alla topologia mesh.
 		\item Architettura di rete:
@@ -279,9 +346,6 @@
 	\begin{itemize}
 		\item Thread è indipendente: Può operare come protocollo di rete autonomo.
 		\item Matter utilizza Thread: Matter sfrutta Thread come infrastruttura di rete mesh, ma non è limitato a esso.
-		\item Thread per Matter: Matter utilizza Thread per i dispositivi a basso consumo energetico in una rete locale.
-		\item Altri protocolli supportati da Matter: Oltre a Thread, Matter funziona anche su Wi-Fi e Ethernet.
-		\item Interoperabilità: Matter facilita l'interoperabilità tra dispositivi basati su Thread e quelli su altre reti, grazie al supporto IP di Thread.
 	\end{itemize}
 \end{frame}
 	% --- Sezione Deadmatch ---
@@ -294,8 +358,30 @@
 			\item BLE: ottimo per corto raggio e basso consumo.
 			\item Matter e Thread: offrono interoperabilità e connessione sicura tra dispositivi.
 		\end{itemize}
+		\begin{center}
+			... in ogni caso il cavo è meglio ...
+		\end{center}
+	
 	\end{frame}
 	
+	\begin{frame}{Z-Wave VS ZigBee}
+		\begin{columns}
+			\begin{column}{0.5\textwidth}
+				\textbf{Z-Wave}
+				\begin{itemize}
+					\item rete mesh
+					\item velocità di trasmissione maggiore ma meno dati (pulsanti e prese)
+				\end{itemize}
+			\end{column}
+			\begin{column}{0.5\textwidth}
+				\textbf{ZigBee}
+				\begin{itemize}
+					\item rete centro stella
+					\item trasporta più dati ma più lentamente (telecamere e termostati)
+				\end{itemize}
+			\end{column}
+		\end{columns}
+	\end{frame}
 	\begin{frame}{Quando usare e quando evitare i protocolli}
 		\begin{itemize}
 			\item Z-Wave e ZigBee: perfetti per sensori e automazione domestica.
@@ -304,7 +390,33 @@
 			\item Matter e Thread: ottimi per integrazioni future-proof e sicurezza.
 		\end{itemize}
 	\end{frame}
+
+	% --- Chi sono io ---
+		\section*{Presentazioni ... alla fine}
+		\begin{frame}{Il sottoscritto}
 	
+			\scalebox{0.3}{
+				\begin{tikzpicture}[thick]
+					\path[use as bounding box] (-36,-2)--(-5,-1);		
+					\draw (0,0) grid (3,3);
+					\foreach \c in {(0,0), (1,0), (2,0), (2,1), (1,2)}
+					\fill \c + (0.5,0.5) circle (0.42);
+				\end{tikzpicture}
+				}
+			\begin{itemize}
+				\item Home Assistant addicted
+				\item Linux Sysadmin (silver wedding)
+				\item Solution Architect Data Management presso DXC Technology
+				\begin{itemize}
+					\item Cloudera technical specialist
+					\item SME (Subject-matter expert) Generative AI
+				\end{itemize}
+			\end{itemize}
+		 	\vspace{0.5cm}
+			GitHub: \href{https://github.com/disoardi}{https://github.com/disoardi} \\
+			@: \href{mailto:abacus@linux.it}{abacus@linux.it}
+			
+		\end{frame}
 	% --- Slide finale con licenza e ringraziamenti ---
 	\section*{Licenza e Ringraziamenti}
 	\begin{frame}{Licenza e Ringraziamenti}
@@ -315,13 +427,13 @@
 			
 			Questa presentazione è rilasciata sotto la licenza \license. Sentiti libero di condividere e adattare il contenuto rispettando i termini della licenza.
 			
-			\vspace{1.5em}
+			\vspace{0.8em}
 			
 			\includegraphics[width=0.2\textwidth]{images/cc-by-sa.png} % Logo Creative Commons, ridotto e centrato
 			
-			\vspace{1.5em}
+			\vspace{0.8em}
 			
-			\textbf{Ringraziamenti:} Un ringraziamento speciale all'Italian Linux Society per il supporto alla community open source.
+			\textbf{Ringraziamenti:}\\Un ringraziamento speciale all'Italian Linux Society per il supporto alla community open source.\\Ringrazio inoltre chi lavora nell'addestrare gli LLM con i quali ho impiegato $\frac{1}{8}$ del tempo che impiego di solito nelle slide del Linux Day
 		\end{center}
 	\end{frame}
 	
